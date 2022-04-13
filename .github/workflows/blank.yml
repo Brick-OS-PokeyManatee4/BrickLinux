@@ -22,7 +22,7 @@ jobs:
        
       - name: Run a multi-line script
         run: |
-          sudo bash -E build_env/prepare.sh
+          sudo -E bash build_env/prepare.sh
           echo test, and deploy your project.
 
   world:
