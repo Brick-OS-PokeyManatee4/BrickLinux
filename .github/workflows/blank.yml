@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Run a one-line script
-        run: cd .. && sudo mv BrickLinux /mnt/ && cd /mnt && sudo mv BrickLinux lfs && cd lfs && sudo bash build_env/version-check.sh && export LFS=/mnt/lfs && export DIST_ROOT=$LFS/ && sudo -E bash build_env/prepare.sh
+        run: cd .. && sudo mv BrickLinux /mnt/ && cd /mnt && sudo mv BrickLinux lfs && cd lfs && sudo bash build_env/version-check.sh && export LFS=/mnt && export DIST_ROOT=$LFS/lfs && sudo -E bash build_env/prepare.sh
 
   world:
     runs-on: ubuntu-latest
