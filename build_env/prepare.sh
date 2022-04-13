@@ -20,7 +20,7 @@ groupadd distrobuild
 useradd -s /bin/bash -g distrobuild -m -k /dev/null distrobuild
 chown -v distrobuild $LFS/{usr,lib,var,etc,bin,sbin,tools,lib64,sources}
 
-dbhome=$(eval echo "distrobuild")
+dbhome=$(eval echo "~distrobuild")
 
 cat > $dbhome/.bash_profile << "EOF"
 exec env -i HOME=$HOME TERM=$TERM PS1='\u:\w\$ ' /bin/bash
