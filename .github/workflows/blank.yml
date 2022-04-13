@@ -18,7 +18,7 @@ jobs:
         run: sudo bash build_env/version-check.sh
 
       - name: Run a one-line
-        run: export LFS=/mnt/lfs & export DIST_ROOT=$/build_root
+        run: export LFS=/mnt/lfs & export DIST_ROOT=$LFS/build_root
        
       - name: Run a multi-line script
         run: |
