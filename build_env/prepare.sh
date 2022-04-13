@@ -3,7 +3,6 @@ echo "LFS Location: ${LFS:?}"
 
 mkdir -p $LFS/sources
 
-for
 for f in $(cat $DIST_ROOT/build_env/build_env_list)
 do
     bn=$(basename $f)
