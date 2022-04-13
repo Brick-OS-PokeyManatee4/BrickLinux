@@ -18,7 +18,7 @@ jobs:
         run: sudo bash build_env/version-check.sh
 
       - name: Run a one-line
-        run: export LFS=/mnt/lfs & export DISTROOT=$/build_root
+        run: export LFS=/mnt/lfs & export DIST_ROOT=$/build_root
        
       - name: Run a multi-line script
         run: |
@@ -33,8 +33,3 @@ jobs:
 
       - name: Run a one-line script
         run: sudo bash build_env/version-check.sh
-
-      - name: Run a multi-line script
-        run: |
-          sudo bash -E build_env/prepare.sh
-          echo test, and deploy your project.
