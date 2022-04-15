@@ -7,3 +7,4 @@ if ! test $(whoami) == "distrobuild" ; then
 fi
 
 echo Building Toolchain and distro commands
+bash build_scripts/binutils-1.sh
