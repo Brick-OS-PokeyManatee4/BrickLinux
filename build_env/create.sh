@@ -1,3 +1,9 @@
 echo "BrickLinux Distro Root: ${DIST_ROOT:?}"
 echo "LFS Location: ${LFS:?}"
-echo "Creating Build envy because you need it duh"
+
+if ! test $(whoami) == "distrobuild" ; then
+    echo "Must run as distrobuild!"
+    exit -1
+fi
+
+echo Building Toolchain and distro commands
